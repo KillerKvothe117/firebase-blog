@@ -12,10 +12,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar setIsAuth={setIsAuth} isAuth={isAuth}/>
+        <Navbar setIsAuth={setIsAuth} isAuth={isAuth} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/createpost" element={<CreatePost />} />
+          <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         </Routes>
       </div>
